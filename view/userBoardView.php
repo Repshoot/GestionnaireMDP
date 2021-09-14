@@ -13,10 +13,36 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password1']) && !empty($_POST['pas
     }
     else {
         createNewUserIfAvailable($pseudo, $password1);
-
     }
 }
 ?>
+<div id="userboard-container">
+
+        <div class="userboard-picture">
+        <a href="">
+            <img src="http://localhost/GestionnaireMDP/public/assets/add.jpg">
+            <span class="userboard-caption">Ajouter des mots de passe</span>
+            </a>
+        </div>
+    
+        <div class="userboard-picture">
+        <a href="">
+            <img src="http://localhost/GestionnaireMDP/public/assets/passlist.jpg">
+            <p class="userboard-caption">Voir les mots de passe</p>
+            </a>
+        </div>
+        
+        <div class="userboard-picture">
+        <a href="">
+            <img src="http://localhost/GestionnaireMDP/public/assets/changepass.jpg">
+            <p class="userboard-caption">Gérer les mots de passe</p>
+            </a>
+        </div>
+        
+   
+
+</div> 
+
 
 <?php
     $content = ob_get_clean();

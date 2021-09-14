@@ -9,7 +9,10 @@ html {
 
 body {
   margin: 0;
-  background: linear-gradient(grey, silver);
+  background: linear-gradient(silver, grey);
+  min-width: 100%;
+  min-height: 100%;
+  /* background-color: white; */
 }
 
 header {
@@ -21,7 +24,7 @@ header {
 }
 
 #title {
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-family: "Orbitron", sans-serif;
   display: inline;
   justify-content: flex-center;
@@ -43,9 +46,89 @@ header img {
   text-align: center;
 }
 
+#header-account {
+  font-family: "Roboto", sans-serif;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  color: rgb(255, 254, 183);
+}
+
+.header-button {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 15px;
+  color: rgb(56, 72, 114);
+}
+#account-info-button {
+  /* background-color: rgb(0, 77, 107); */
+  background-color: rgb(255, 254, 183);
+}
+
+#disconnect-button {
+  background-color: white;
+}
+
+#header-name {
+  font-weight: bold;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
 .container {
   display: flex;
   justify-content: center;
+}
+
+#userboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.userboard-picture {
+  display: inline-block;
+  border: 0px black solid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-top: 30px;
+  background-color: white;
+}
+
+.userboard-picture:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.userboard-picture img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 0px;
+}
+
+.userboard-caption {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgb(56, 72, 114);
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding: 20px;
+  display: block;
 }
 
 .element:nth-child(2) {
@@ -78,6 +161,12 @@ header img {
   padding: 10px;
   margin: 10px 5px;
   width: 100%;
+}
+
+.table-form input::placeholder {
+  color: black;
+  opacity: 0.5;
+  font-size: 1.2em;
 }
 
 .table-form button {
@@ -162,22 +251,20 @@ header img {
   background-color: rgba(66, 89, 144, 0.9);
 }
 
+/* ALERT */
 .alert {
   font-size: 1.3em;
   text-align: center;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-
   color: white;
   padding: 3px;
   border-radius: 3px;
 }
-
 #error {
-  background-color: red;
+  background-color: rgb(255, 29, 29);
 }
-
 #success {
-  background-color: green;
+  background-color: rgb(0, 165, 0);
 }

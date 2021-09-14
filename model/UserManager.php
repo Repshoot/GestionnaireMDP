@@ -27,10 +27,46 @@ class UserManager extends Manager {
             $req = $bdd->prepare('INSERT INTO users (pseudo, password, secret_key) VALUES (?,?,?)');
             $req -> execute(array($pseudo, $password, $secret_key));
 
+          
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+            /*Récupérer l'id du nouvel utilisateur */
+            $requete = $bdd->prepare('SELECT * FROM users WHERE pseudo = ?');
+            $requete->execute(array($pseudo));
+
+            while ($user = $requete->fetch()) {
+                $userNewId = strval($user['id']);
+            }
+
+
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+            /*Créer la table de stockage de mots de passe */
+
+            $pswTableName = 'passwords_user_'.$userNewId;
+
+            $bdd = $this->connection();
+            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $sql = 'CREATE TABLE IF NOT EXISTS '.$pswTableName.'(id int(11) AUTO_INCREMENT PRIMARY KEY,
+            id_user int(11) NOT NULL,
+            website text NOT NULL,
+            username text NOT NULL,
+            password text NOT NULL)';
+                try {
+                    $bdd->exec($sql);
+                }
+                catch(PDOException $e) {
+                    echo $sql . $e->getMessage();
+                }
+
             header('location: http://localhost/GestionnaireMDP/index.php/?success=1');
-           }
         }
     }
+}
+    
 
     public function connectUser ($pseudo, $password){
 
@@ -41,7 +77,6 @@ class UserManager extends Manager {
 
         $requete = $bdd->prepare('SELECT * FROM users WHERE pseudo = ?');
         $requete->execute(array($pseudo));
-        
 
         while ($user = $requete->fetch()) {
             if ($password == $user['password']){
@@ -55,7 +90,6 @@ class UserManager extends Manager {
         if ($error==1) {
             header('location: http://localhost/GestionnaireMDP/index.php/?error=1&connectionError=1');
         }
-        
     }
 
 }

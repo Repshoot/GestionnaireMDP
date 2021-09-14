@@ -4,6 +4,11 @@
 session_start();
     require('controller/controller.php');
 
+    if (isset ($_GET['disconnect'])){
+        session_unset();
+        session_destroy();
+    }
+
     if (isset ($_SESSION['connected'])){
         require('view/userBoardView.php');
     }
