@@ -10,9 +10,23 @@ session_start();
     }
 
     if (isset ($_SESSION['connected'])){
-        require('view/userBoardView.php');
-    }
 
+        if (isset ($_GET['page'])){
+
+            if ($_GET['page'] == 'addpsw'){
+                require('view/addPasswordsView.php');
+            }
+            // else if ($_GET['page'] == 'viewpsw'){
+            //     require('view/viewPasswords.php');
+            // }
+            else {
+                require('view/userBoardView.php');
+            }
+        }
+        else {
+            require('view/userBoardView.php');
+        }
+    }
     else {
         try {
             require('view/connectionPageView.php');

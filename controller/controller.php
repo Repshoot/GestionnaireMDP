@@ -1,25 +1,7 @@
 <?php
     require_once ('model/UserManager.php');
-    require_once ('model/InfoManager.php');
+    require_once ('model/InfosManager.php');
     
-    function home() {
-        $userManager = new UserManager();
-        $requete = $userManager->getUsers();
-    }
-    
-
-    function postInfos($username, $password, $comment) {
-        $InfoManager = new InfoManager();
-        $result = $InfoManager->postInfos($username, $password, $comment);
-        
-        if($result === false){
-            throw new Exception("Impossible d'ajouter votre avis pour le moment.");
-        }
-        else {
-                header('location: index.php?page=avis');
-                exit();
-            }
-    }
 
     function createNewUserIfAvailable ($pseudo, $password) {
         $userManager = new UserManager();
@@ -32,3 +14,16 @@
         $userManager->connectUser($pseudoConnection, $passwordConnection);
     }
    
+
+    function addInfos($website, $username, $password) {
+        $InfosManager = new InfosManager();
+        $result = $InfosManager->addInfos($website, $username, $password);
+        
+        if($result === false){
+            header('location: index.php?page=addpsw&error=1');
+        }
+        else {
+                header('location: index.php?page=addpsw&success=1');
+                exit();
+            }
+    }

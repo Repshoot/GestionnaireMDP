@@ -19,7 +19,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password1']) && !empty($_POST['pas
 <div id="userboard-container">
 
         <div class="userboard-picture">
-        <a href="">
+        <a href="http://localhost/GestionnaireMDP/index.php/?page=addpsw">
             <img src="http://localhost/GestionnaireMDP/public/assets/add.jpg">
             <span class="userboard-caption">Ajouter des mots de passe</span>
             </a>
