@@ -35,7 +35,7 @@ body {
 
 <a class="return-button" type="button" href="userBoardView.php">&lt;&lt; Retour</a>
 <div class="container">
-    <div id="subscription-form">
+    <div class="subscription-form" id="addPswForm">
         <h1 style="text-align: center;">Ajouter des mots de passe</h1>
         <hr>
         <?php
@@ -49,7 +49,7 @@ body {
                 <script>
                     setTimeout(function(){
                         document.getElementById('add-success-container').style.display = 'none';
-                    }, 2500);
+                    }, 3000);
                 </script>
 
                 <?php

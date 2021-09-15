@@ -25,7 +25,7 @@ if (isset($_POST['pseudo-connection']) && isset($_POST['password-connection'])){
 ?>
 
 <div class="container">
-    <div id="subscription-form">
+    <div class="subscription-form">
 
     <?php
     if(isset($_GET['error'])) {

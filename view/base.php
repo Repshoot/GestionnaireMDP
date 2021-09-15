@@ -40,8 +40,10 @@
     <header>
         <div class="container">
 
-            <div class="element">
-                <img src="http://localhost/GestionnaireMDP/public/assets/cybersecurity.jpg"/>
+            <div class="element" >
+                <div id="image-header">
+                    <img src="http://localhost/GestionnaireMDP/public/assets/cybersecurity.jpg"/>
+                </div>
             </div>
 
             <div class="element">
@@ -56,7 +58,7 @@
                 echo '
                 <div class="element">
                 <a id="connection-button" onclick="document.getElementById(\'modal-connection\').style.display=\'block\'; document.getElementById(\'modal-background\').style.display=\'block\';">
-                Se connecter</a>';
+                Connexion</a>';
             }
             else {
                 ?> <div class="element">
