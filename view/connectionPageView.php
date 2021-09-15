@@ -47,7 +47,7 @@ if (isset($_POST['pseudo-connection']) && isset($_POST['password-connection'])){
     }
 ?>
 
-        <h1 style="text-align: center">Créez votre compte gratuitement</h1>
+        <h1 id="connection-title">Créez votre compte gratuitement</h1>
         <form method="post" action="index.php">
             <table class="table-form">
                 <tr><td><label>pseudo</label></td><td><input type="text" name="pseudo" required></td></tr>

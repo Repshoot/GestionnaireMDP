@@ -67,6 +67,34 @@ header img {
   margin-left: 15px;
   color: rgb(56, 72, 114);
 }
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(56, 72, 114);
+}
+#footer-credits {
+  color: white;
+  font-size: 1.1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  position: fixed;
+  margin-left: 25px;
+  margin-top: 38px;
+}
+
+#footer-send-email {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(255, 254, 183);
+  border: 1px solid rgb(255, 254, 183);
+  border-radius: 3px;
+  padding: 5px;
+  margin-left: 5px;
+}
+
 #account-info-button {
   /* background-color: rgb(0, 77, 107); */
   background-color: rgb(255, 254, 183);
@@ -121,7 +149,7 @@ header img {
 .userboard-caption {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  text-decoration: none;
+
   text-transform: uppercase;
   background-color: rgb(56, 72, 114);
   color: white;
@@ -129,6 +157,10 @@ header img {
   margin: 0px;
   padding: 20px;
   display: block;
+}
+
+.userboard-links {
+  text-decoration: none;
 }
 
 .element:nth-child(2) {
@@ -174,16 +206,27 @@ header img {
   font-size: 1em;
 }
 
+#connection-title {
+  text-align: center;
+  color: rgb(66, 89, 144);
+  font-size: 2em !important;
+  margin: 20px !important;
+}
+
 #connection-button {
   margin-left: 20px;
   margin-top: 15px;
   padding: 20px;
   font-family: "Roboto", sans-serif;
   font-size: 1.3em;
-  background-color: rgb(29, 126, 0);
+  background-color: rgb(35, 148, 0);
   border-radius: 7px;
   cursor: pointer;
   border: 1px solid white;
+}
+#connection-button:hover {
+  background-color: rgb(51, 180, 12);
+  transition: 0.1s;
 }
 
 #sub-button {
@@ -201,6 +244,7 @@ header img {
   background-color: white;
   border: 1px solid rgb(66, 89, 144);
   color: rgb(66, 89, 144);
+  transition: 0.1s;
 }
 
 #cancel-sub-button {
@@ -303,7 +347,7 @@ header img {
 }
 
 #table-view-psw {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 90%;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -340,5 +384,46 @@ header img {
   border-bottom: 0;
 }
 #table-view-psw tr td:last-child {
+  border-right: 0;
+}
+
+#table-manage-psw {
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  padding: 18px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 15px;
+  font-size: 1.5em;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+#table-manage-psw th {
+  padding: 15px;
+  color: rgb(160, 72, 108);
+  font-family: "Orbitron", sans-serif;
+}
+
+#table-manage-psw td {
+  padding: 10px;
+  border: 1px solid rgb(160, 72, 108);
+}
+
+#table-manage-psw tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#table-manage-psw tr:first-child td {
+  border-top: 0;
+}
+#table-manage-psw tr td:first-child {
+  border-left: 0;
+}
+#table-manage-psw tr:last-child td {
+  border-bottom: 0;
+}
+#table-manage-psw tr td:last-child {
   border-right: 0;
 }

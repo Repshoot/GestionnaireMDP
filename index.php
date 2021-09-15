@@ -14,10 +14,15 @@ session_start();
         if (isset ($_GET['page'])){
 
             if ($_GET['page'] == 'addpsw'){
+                
                 require('view/addPasswordsView.php');
             }
+
              else if ($_GET['page'] == 'viewpsw'){
                 getPasswords();
+             }
+             else if ($_GET['page'] == 'managepsw'){
+                managePasswords();
              }
             else {
                 require('view/userBoardView.php');

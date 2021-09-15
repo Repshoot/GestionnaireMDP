@@ -19,21 +19,21 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password1']) && !empty($_POST['pas
 <div id="userboard-container">
 
         <div class="userboard-picture">
-        <a href="http://localhost/GestionnaireMDP/index.php/?page=addpsw">
+        <a class="userboard-links" href="http://localhost/GestionnaireMDP/index.php/?page=addpsw">
             <img src="http://localhost/GestionnaireMDP/public/assets/add.jpg">
             <span class="userboard-caption">Ajouter des mots de passe</span>
             </a>
         </div>
     
         <div class="userboard-picture">
-        <a href="http://localhost/GestionnaireMDP/index.php/?page=viewpsw">
+        <a class="userboard-links" href="http://localhost/GestionnaireMDP/index.php/?page=viewpsw">
             <img src="http://localhost/GestionnaireMDP/public/assets/passlist.jpg">
             <p class="userboard-caption">Voir les mots de passe</p>
             </a>
         </div>
         
         <div class="userboard-picture">
-        <a href="">
+        <a class="userboard-links" href="http://localhost/GestionnaireMDP/index.php/?page=managepsw"">
             <img src="http://localhost/GestionnaireMDP/public/assets/changepass.jpg">
             <p class="userboard-caption">Gérer les mots de passe</p>
             </a>
