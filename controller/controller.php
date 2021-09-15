@@ -27,3 +27,9 @@
                 exit();
             }
     }
+
+    function getPasswords() {
+        $userManager = new UserManager();
+        $requetePsw = $userManager->getPasswords();
+        require('view/viewPasswords.php');
+    }

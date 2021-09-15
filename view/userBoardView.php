@@ -26,7 +26,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password1']) && !empty($_POST['pas
         </div>
     
         <div class="userboard-picture">
-        <a href="">
+        <a href="http://localhost/GestionnaireMDP/index.php/?page=viewpsw">
             <img src="http://localhost/GestionnaireMDP/public/assets/passlist.jpg">
             <p class="userboard-caption">Voir les mots de passe</p>
             </a>

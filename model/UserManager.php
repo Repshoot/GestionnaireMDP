@@ -56,5 +56,17 @@ class UserManager extends Manager {
             header('location: http://localhost/GestionnaireMDP/index.php/?error=1&connectionError=1');
         }
     }
+
+
+    public function getPasswords(){
+
+        $userId = strval($_SESSION['user_id']);
+
+        $bdd = $this->connection();
+
+        $requetePsw = $bdd->query('SELECT * FROM passwords_users WHERE id_user = '.$userId.';');
+        
+        return $requetePsw;
+    }
 }
     
