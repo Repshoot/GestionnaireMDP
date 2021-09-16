@@ -17,16 +17,7 @@
     <div id="modal-connection-content">
       <p id="close-modal">&times;</p>
       <p id="connection-title">Connexion</p>
-
       <hr>
-      <!-- <form method="post" action="index.php">
-            <table class="table-form">
-                <tr><td><label>Pseudo</label></td><td><input type="text" name="pseudo-connection" required></input></td></tr>
-                <tr><td><label>Mot de passe</label></td><td><input type="password" name="password-connection" required></input></td></tr>
-                <tr><td><button id="cancel-sub-button">Annuler</button></td><td><button id="sub-button" type="submit" name="sub">Se connecter</button></td></tr>
-            </table>
-        </form> -->
-
         <form class="table-form" method="post" action="index.php">
                 <input type="text" name="pseudo-connection" placeholder="Pseudo" required></input><br>
                 <input type="password" name="password-connection" placeholder="Mot de passe" required></input><br>
@@ -62,9 +53,9 @@
             }
             else {
                 ?> <div class="element">
-                        <p id="header-account"><?php echo 'Bonjour <span id="header-name">'.$_SESSION['pseudo'].'</span>'?> </p>
+                        <p id="header-account"><?php echo 'Bienvenue <span id="header-name">'.$_SESSION['pseudo'].'</span>'?> </p>
                         
-                        <a class="header-button" id="account-info-button">Votre compte</a>
+                        <a class="header-button" id="account-info-button" href="http://localhost/GestionnaireMDP/index.php/?page=myaccount">Mon compte</a>
                         <a class="header-button" id="disconnect-button" href="http://localhost/GestionnaireMDP/index.php/?disconnect=1">Déconnexion</a>
                     </div>
                 <?php

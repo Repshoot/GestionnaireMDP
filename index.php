@@ -24,6 +24,11 @@ session_start();
              else if ($_GET['page'] == 'managepsw'){
                 managePasswords();
              }
+             else if ($_GET['page'] == 'myaccount'){
+                require('view/myAccountView.php');
+             }
+
+             
             else {
                 require('view/userBoardView.php');
             }

@@ -33,27 +33,26 @@ body {
 <script>
 
 function copyClipboard(pswToCopy) {
+  var id = "#" + pswToCopy;
+  var copyText = document.querySelector(id);
 
-    var id = "#" + pswToCopy;
-    var copyText = document.querySelector(id);
+  var textArea = document.createElement("textarea");
+  textArea.value = copyText.textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); /* For mobile devices */
+  document.execCommand("Copy");
+  textArea.remove();
 
-    var textArea = document.createElement("textarea");
-    textArea.value = copyText.textContent;
-    document.body.appendChild(textArea);
-    textArea.select();
-    textArea.setSelectionRange(0, 99999); /* For mobile devices */
-    document.execCommand("Copy");
-    textArea.remove();
-
-    var toolTipId =  "myTooltip"+pswToCopy;
-    var tooltip = document.getElementById(toolTipId);
-    tooltip.innerHTML = "Mot de passe copié !";
+  var toolTipId = "myTooltip" + pswToCopy;
+  var tooltip = document.getElementById(toolTipId);
+  tooltip.innerHTML = "Mot de passe copié !";
 }
 
 function outFunc(pswToCopy) {
-    var toolTipId =  "myTooltip"+pswToCopy;
-    var tooltip = document.getElementById(toolTipId);
-    tooltip.innerHTML = "Copier dans le presse papier";
+  var toolTipId = "myTooltip" + pswToCopy;
+  var tooltip = document.getElementById(toolTipId);
+  tooltip.innerHTML = "Copier dans le presse papier";
 }
 
 </script>

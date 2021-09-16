@@ -25,6 +25,6 @@ body {
 
 <?php
     $content = ob_get_clean();
-    $title = 'Voir les mots de passe';
+    $title = 'Gérer les mots de passe';
     require('base.php');
 ?>

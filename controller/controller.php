@@ -39,3 +39,9 @@
         $requetePsw = $userManager->getPasswords();
         require('view/managePasswordsView.php');
     }
+
+    function getNumberPsw() {
+        $userManager = new UserManager();
+        $requeteNbPsw = $userManager->getNumberPsw();
+        return $requeteNbPsw;
+    }

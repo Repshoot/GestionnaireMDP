@@ -68,5 +68,16 @@ class UserManager extends Manager {
         
         return $requetePsw;
     }
-}
+
+    public function getNumberPsw(){
+        $userId = strval($_SESSION['user_id']);
+        $bdd = $this->connection();
+
+        $requetePsw = $bdd->query('SELECT count(*) as totalPsw FROM passwords_users WHERE id_user = '.$userId.';')->fetchColumn(); ;
+
+            return $requetePsw;
+        }
+        
+    }
+
     
