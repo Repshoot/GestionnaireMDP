@@ -17,3 +17,8 @@ cancelButton.onclick = function () {
   modalConnection.style.display = "none";
   modalBackground.style.display = "none";
 };
+
+modalClose.onclick = function () {
+  modalConnection.style.display = "none";
+  modalBackground.style.display = "none";
+};

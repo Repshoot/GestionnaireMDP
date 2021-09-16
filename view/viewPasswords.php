@@ -2,7 +2,7 @@
 ob_start();
 ?>
 <style>
-body {
+#page-container {
     background: linear-gradient(silver, rgb(66, 89, 144));
 }
 </style>

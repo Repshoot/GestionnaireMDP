@@ -45,3 +45,14 @@
         $requeteNbPsw = $userManager->getNumberPsw();
         return $requeteNbPsw;
     }
+
+    function modifyPsw($idModify, $newPsw) {
+        $InfosManager = new InfosManager();
+        $InfosManager->modifyRow($idModify, $newPsw);
+    }
+
+    function deletePsw($idDelete) {
+        $userManager = new UserManager();
+        $userManager->deleteRow($idDelete);
+    }
+

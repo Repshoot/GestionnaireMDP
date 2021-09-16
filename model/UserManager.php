@@ -77,7 +77,20 @@ class UserManager extends Manager {
 
             return $requetePsw;
         }
-        
+
+        public function deleteRow($idDelete){
+            $bdd = $this->connection();
+            try{
+                $requete = $bdd->prepare('DELETE FROM passwords_users WHERE id = ?');
+                $requete->execute(array($idDelete));
+            }catch(PDOException $e) {
+
+                echo $e->getMessage();
+                require('http://localhost/GestionnaireMDP/index.php/?page=errorView');
+            }
+
+            header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&deletesuccess=1');
+            }
     }
 
     

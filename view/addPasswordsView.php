@@ -19,7 +19,7 @@ h1 {
     text-align: center;
 }
 
-body {
+#page-container {
     background: linear-gradient(silver, #83b981);
 }
 
@@ -43,7 +43,7 @@ body {
                 ?>
                 <div id="add-success-container">
                     <img id="checkbox-image" src="http://localhost/GestionnaireMDP/public/assets/checkbox.jpg" alt="checkbox">
-                    <p class="alert" id="success">Informations enregistrées avec succès</p>
+                    <p class="alert-psw-manage success" id="add-success">Informations enregistrées avec succès</p>
                 </div>
 
                 <script>

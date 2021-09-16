@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://localhost/GestionnaireMDP/public/design/default.css" />    
 </head>
     <body>
-
+    <div id="page-container">
 <div id="modal-background">
 </div>
 
@@ -62,16 +62,16 @@
             }
 
             ?>
-            </div>
         </div>
     </header>
 
-
-            <?= $content ?>
-        
-            <footer>
-                <p id="footer-credits">Site portfolio créé par Guillaume Repka. <a id="footer-send-email" href="mailto:sk_8_397@hotmail.com">Envoyer un email</a></p>
-            </footer>
+            
+                <?= $content ?>
+</div>
+                <footer>
+                    <p id="footer-credits">Site portfolio créé par Guillaume Repka. <a id="footer-send-email" href="mailto:sk_8_397@hotmail.com">Envoyer un email</a></p>
+                </footer>
+            
             <script src="http://localhost/GestionnaireMDP/public/JS/default.js"></script>
     </body>
 </html>
