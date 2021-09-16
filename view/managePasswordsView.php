@@ -20,7 +20,7 @@ ob_start();
         <div id="delete-modal-buttons">
             <button type="submit" class="delete-button" id="delete-button-oui" >Oui</button>
             </form>
-            <a class="delete-modify" id="delete-button-non" onclick="document.querySelector('#modal-delete').style.display = 'none'">Non</a> 
+            <a class="delete-button" id="delete-button-non" onclick="document.querySelector('#modal-delete').style.display = 'none'">Non</a> 
         </div>
 </div>
 
@@ -55,6 +55,11 @@ ob_start();
             <div class="alert-psw-manage error" id="alert-psw-manage-error">Erreur : les nouveaux mots de passe ne sont pas identiques.</div>
             <?php
         }
+        else if (isset($_GET['modifysuccess'])) { ?>
+        
+        <div class="alert-psw-manage success" id="alert-psw-manage-success">Le mot de passe a été modifié.</div>
+        <?php
+        }
         ?>
         <script>
             setTimeout(function(){
@@ -88,22 +93,26 @@ ob_start();
 <script>
     function showDeleteModal (rowToDelete) {
         let modalDelete = document.querySelector("#modal-delete");
+        let modalModify = document.querySelector("#modal-modify");
         let deleteButtonOui = document.querySelector("#delete-button-oui");
 
         let idInputDelete = document.querySelector("#id-input-delete");
         idInputDelete.value = rowToDelete; 
 
         modalDelete.style.display = "block";        
+        modalModify.style.display = "none"; 
     }
 
     function showModifyModal (rowToModify) {
         let modalModify = document.querySelector("#modal-modify");
+        let modalDelete = document.querySelector("#modal-delete");
         let deleteButtonOui = document.querySelector("#modify-button-oui");
 
         let idInputModify = document.querySelector("#id-input-modify");
         idInputModify.value = rowToModify; 
 
-        modalModify.style.display = "block";        
+        modalModify.style.display = "block";   
+        modalDelete.style.display = "none";     
     }
 </script>
 

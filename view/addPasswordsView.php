@@ -17,6 +17,7 @@ if(!empty($_POST['addWebsite']) && !empty($_POST['addUsername']) && !empty($_POS
 h1 {
     color: #4db34b;
     text-align: center;
+    margin: 15px;
 }
 
 #page-container {
@@ -36,7 +37,7 @@ h1 {
 <a class="return-button" type="button" href="userBoardView.php">&lt;&lt; Retour</a>
 <div class="container">
     <div class="subscription-form" id="addPswForm">
-        <h1 style="text-align: center;">Ajouter des mots de passe</h1>
+        <h1>Ajouter des mots de passe</h1>
         <hr>
         <?php
             if(isset($_GET['success'])){

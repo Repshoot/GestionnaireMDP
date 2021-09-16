@@ -22,8 +22,9 @@ class InfosManager extends Manager{
     public function modifyRow($idModify, $newPsw){
         $bdd = $this->connection();
 
-        $requete = $bdd->prepare('UPDATE passwords_users SET password = ? WHERE id=?');
-        $requete->execute(array($idModify, $newPsw));
+        $requete = 'UPDATE `passwords_users` SET `password` = \''.$newPsw.'\' WHERE `id` = '.$idModify;
+
+        $bdd->exec($requete);
         
         header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&modifysuccess=1');
     }
