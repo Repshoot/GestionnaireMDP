@@ -5,7 +5,6 @@
 
     function createNewUserIfAvailable ($pseudo, $password) {
         $userManager = new UserManager();
-
         $userManager->createNewUserIfAvailable($pseudo, $password);
     }
 
@@ -29,20 +28,20 @@
     }
 
     function getPasswords() {
-        $userManager = new UserManager();
-        $requetePsw = $userManager->getPasswords();
+        $InfosManager = new InfosManager();
+        $requetePsw = $InfosManager->getPasswords();
         require('view/viewPasswords.php');
     }
 
     function managePasswords() {
-        $userManager = new UserManager();
-        $requetePsw = $userManager->getPasswords();
+        $InfosManager = new InfosManager();
+        $requetePsw = $InfosManager->getPasswords();
         require('view/managePasswordsView.php');
     }
 
     function getNumberPsw() {
-        $userManager = new UserManager();
-        $requeteNbPsw = $userManager->getNumberPsw();
+        $InfosManager = new InfosManager();
+        $requeteNbPsw = $InfosManager->getNumberPsw();
         return $requeteNbPsw;
     }
 
@@ -52,8 +51,8 @@
     }
 
     function deletePsw($idDelete) {
-        $userManager = new UserManager();
-        $userManager->deleteRow($idDelete);
+        $InfosManager = new InfosManager();
+        $InfosManager->deleteRow($idDelete);
     }
 
 

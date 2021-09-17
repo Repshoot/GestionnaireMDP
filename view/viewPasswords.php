@@ -9,8 +9,8 @@ ob_start();
 <a class="return-button" type="button" href="userBoardView.php">&lt;&lt; Retour</a>
 
 <div class="container">
-<table id="table-view-psw">
-    <tr><th>Site</th><th>Identifiant</th><th>Mot de passe</th></tr>
+    <table id="table-view-psw">
+        <tr><th>Site</th><th>Identifiant</th><th>Mot de passe</th></tr>
         <?php
         while ($ligneInfos = $requetePsw->fetch()) {
             ?><tr>
