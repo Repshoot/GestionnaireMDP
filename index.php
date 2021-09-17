@@ -50,7 +50,7 @@ session_start();
              }
              
             else {
-                require('view/userBoardView.php');
+                require('view/errorView.php');
             }
         }
         else {
