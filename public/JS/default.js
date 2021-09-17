@@ -88,3 +88,19 @@ setTimeout(function () {
 setTimeout(function () {
   document.getElementById("add-success-container").style.display = "none";
 }, 3000);
+
+setTimeout(function () {
+  document.getElementById("error-connection-psw").style.display = "none";
+}, 5000);
+
+setTimeout(function () {
+  document.getElementById("error-connection-pseudo").style.display = "none";
+}, 5000);
+
+setTimeout(function () {
+  document.getElementById("error-connection").style.display = "none";
+}, 5000);
+
+setTimeout(function () {
+  document.getElementById("success-account-creation").style.display = "none";
+}, 5000);

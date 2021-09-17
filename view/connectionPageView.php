@@ -37,19 +37,19 @@ if (isset($_POST['pseudo-connection']) && isset($_POST['password-connection'])){
     if(isset($_GET['error'])) {
 
         if(isset($_GET['pass'])) {
-            echo '<p class="alert error">Vos mots de passe ne sont pas identiques</p>';
+            echo '<p class="alert error" id="error-connection-psw">Vos mots de passe ne sont pas identiques</p>';
         }
 
-        if(isset($_GET['pseudo'])) {
-            echo '<p class="alert error" id="error-connection-page">Ce pseudo existe déjà.</p>';
+        else if(isset($_GET['pseudo'])) {
+            echo '<p class="alert error" id="error-connection-pseudo">Ce pseudo existe déjà.</p>';
         }
 
-        if(isset($_GET['connectionError'])) {
-            echo '<p class="alert error" id="error-connection-page">La connexion à échoué.</p>';
+        else if(isset($_GET['connectionError'])) {
+            echo '<p class="alert error" id="error-connection">La connexion à échoué.</p>';
         }
     }
     else if (isset($_GET['success'])){
-            echo '<p class="alert success">Votre compte a été créé. Vous pouvez maintenant vous connecter.</p>';
+            echo '<p class="alert success" id="success-account-creation">Votre compte a été créé. Vous pouvez maintenant vous connecter.</p>';
     }
 ?>
 

@@ -16,7 +16,7 @@ class UserManager extends Manager {
 
         while ($pseudo_verification = $req->fetch()) {
             if($pseudo_verification['numberPseudo'] != 0) {
-                header('location: location: http://localhost/GestionnaireMDP/index.php/?error=1&pseudo=1');
+                header('location: http://localhost/GestionnaireMDP/index.php/?error=1&pseudo=1');
                 exit();
             }
            else {
