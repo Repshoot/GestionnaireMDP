@@ -23,8 +23,8 @@ session_start();
                 header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&pswmatcherror=1 ');
             }
             else {
-                $idModify = $_GET["idModify"];
-                $newPsw = $_GET["newPsw1"];
+                $idModify = htmlspecialchars($_GET["idModify"]);
+                $newPsw = htmlspecialchars($_GET["newPsw1"]);
                 modifyPsw($idModify, $newPsw);
             }
         }

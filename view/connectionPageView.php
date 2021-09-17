@@ -4,9 +4,9 @@ ob_start();
 
 <?php
 if(!empty($_POST['pseudo']) && !empty($_POST['password1']) && !empty($_POST['password2'])){
-    $pseudo = $_POST['pseudo'];
-    $password1 = $_POST['password1'];
-    $password2 = $_POST['password2'];
+    $pseudo = htmlspecialchars($_POST['pseudo']);
+    $password1 = htmlspecialchars($_POST['password1']);
+    $password2 = htmlspecialchars($_POST['password2']);
 
     if($password1 != $password2) {
     header('location: index.php/?error=1&pass=1');
@@ -17,8 +17,8 @@ if(!empty($_POST['pseudo']) && !empty($_POST['password1']) && !empty($_POST['pas
 }
 
 if (isset($_POST['pseudo-connection']) && isset($_POST['password-connection'])){
-        $pseudoConnection = $_POST['pseudo-connection'];
-        $passwordConnection = $_POST['password-connection'];
+        $pseudoConnection = htmlspecialchars($_POST['pseudo-connection']);
+        $passwordConnection = htmlspecialchars($_POST['password-connection']);
 
         connectUser($pseudoConnection, $passwordConnection);
     }

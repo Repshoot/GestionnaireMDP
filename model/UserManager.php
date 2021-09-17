@@ -17,6 +17,7 @@ class UserManager extends Manager {
         while ($pseudo_verification = $req->fetch()) {
             if($pseudo_verification['numberPseudo'] != 0) {
                 header('location: location: http://localhost/GestionnaireMDP/index.php/?error=1&pseudo=1');
+                exit();
             }
            else {
             $secret_key = sha1($pseudo).time();
@@ -28,6 +29,7 @@ class UserManager extends Manager {
             $req -> execute(array($pseudo, $password, $secret_key));
 
             header('location: http://localhost/GestionnaireMDP/index.php/?success=1');
+            exit();
         }
     }
 }
@@ -50,10 +52,12 @@ class UserManager extends Manager {
                 $_SESSION['creation_date'] = $user['creation_date'];
 
                 header('location: http://localhost/GestionnaireMDP/index.php');
+                exit();
             }
         }
         if ($error==1) {
             header('location: http://localhost/GestionnaireMDP/index.php/?error=1&connectionError=1');
+            exit();
         }
     }
 

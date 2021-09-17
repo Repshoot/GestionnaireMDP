@@ -49,6 +49,7 @@ class InfosManager extends Manager{
             }
 
             header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&deletesuccess=1');
+            exit();
             }
 
     public function modifyRow($idModify, $newPsw){
@@ -57,6 +58,7 @@ class InfosManager extends Manager{
         $bdd->exec($requete);
 
         header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&modifysuccess=1');
+        exit();
     }
 
 
