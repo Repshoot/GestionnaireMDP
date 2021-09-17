@@ -72,22 +72,22 @@ ob_start();
         </script>
 
 <div class="container">
-<table id="table-manage-psw">
-    <tr><th>Site</th><th>Identifiant</th><th>Mot de passe</th></tr>
-        <?php
-        while ($ligneInfos = $requetePsw->fetch()) {
-            ?> <tr>
-                <td> <?= $ligneInfos['website'] ?></td> <td><?= $ligneInfos['username']?></td> <td><?=$ligneInfos['password']?></td>
-            <td style="text-align: center;">
-                <a class="manage-button" id="manage-modify" onclick="showModifyModal('<?=$ligneInfos['id'] ?>')">Modifier</a>
-            </td><td style="text-align: center;">
-                <a class="manage-button" id="manage-delete" onclick="showDeleteModal('<?=$ligneInfos['id'] ?>')">Supprimer</a>
-            </td></tr>
-            
-            <?php
-        }
-        ?>
-    </table>
+        <table id="table-manage-psw">
+            <tr><th>Site</th><th>Identifiant</th><th>Mot de passe</th></tr>
+                <?php
+                while ($ligneInfos = $requetePsw->fetch()) {
+                ?> <tr>
+                    <td> <?= $ligneInfos['website'] ?></td> <td><?= $ligneInfos['username']?></td> <td><?=$ligneInfos['password']?></td>
+                <td style="text-align: center;">
+                    <a class="manage-button" id="manage-modify" onclick="showModifyModal('<?=$ligneInfos['id'] ?>')">Modifier</a>
+                </td><td style="text-align: center;">
+                    <a class="manage-button" id="manage-delete" onclick="showDeleteModal('<?=$ligneInfos['id'] ?>')">Supprimer</a>
+                </td></tr>
+                
+                <?php
+            }
+            ?>
+        </table>
 </div>
 
 <script>
