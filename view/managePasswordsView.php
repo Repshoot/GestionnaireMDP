@@ -12,7 +12,7 @@ ob_start();
 
 <div id="modal-delete">
       <p id="close-modal-delete" onclick="document.querySelector('#modal-delete').style.display = 'none'">&times;</p>
-      <p id="modal-delete-title">Etes vous sûr de vouloir supprimer cette ligne ?</p>
+      <p id="modal-delete-title">Etes vous sûr de vouloir supprimer cette ligne&nbsp;?</p>
       <p id="modal-delete-para">Cette action est irréversible.</p>
 
     <form action="GET" action="http://localhost/GestionnaireMDP/index.php">
@@ -35,9 +35,9 @@ ob_start();
             <tr><td>Confirmer :</td><td><input type="password" name="newPsw2"></td></tr>
         </table>
         <div id="modify-modal-buttons">
-            <button type="submit" class="modify-button" id="modify-button-oui" >Oui</button>
+            <button type="submit" class="modify-button" id="modify-button-oui" >OK</button>
             </form>
-            <a class="modify-button" id="modify-button-non" onclick="document.querySelector('#modal-modify').style.display = 'none'">Non</a> 
+            <a class="modify-button" id="modify-button-non" onclick="document.querySelector('#modal-modify').style.display = 'none'">Annuler</a> 
         </div>
 </div>
 

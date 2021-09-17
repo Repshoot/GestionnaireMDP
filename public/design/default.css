@@ -18,7 +18,7 @@ body {
   min-height: 100%;
   margin: 0;
   padding-bottom: 100px;
-  background: linear-gradient(silver, rgb(128, 128, 128));
+  background: linear-gradient(white, rgb(255, 254, 183));
 }
 
 header {
@@ -51,6 +51,7 @@ header img {
   overflow: hidden;
   margin: 5px;
   height: 100px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 #titles-container {
@@ -109,6 +110,7 @@ footer {
 }
 
 #account-info-button {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   background-color: rgb(255, 254, 183);
 }
 
@@ -119,6 +121,7 @@ footer {
 
 #disconnect-button {
   background-color: white;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 #disconnect-button:hover {
@@ -149,12 +152,12 @@ footer {
 
 .userboard-picture {
   display: inline-block;
-  border: 0px black solid;
+  border: 1px rgb(56, 72, 114) solid;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  margin-top: 100px;
+  margin-top: 80px;
   background-color: white;
 }
 
@@ -200,10 +203,13 @@ footer {
   padding: 15px;
   margin-top: 30px;
   font-family: "Roboto", sans-serif;
+  border: 2px solid rgb(66, 89, 144);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 #addPswForm {
   margin-top: 0;
+  border: 2px solid rgb(16, 148, 16);
 }
 
 .table-form {
@@ -259,7 +265,7 @@ footer {
   cursor: pointer;
   background-color: rgb(66, 89, 144);
   border: none;
-  border: 1px solid white;
+  border: 1px solid rgb(66, 89, 144);
   border-radius: 5px;
   color: white;
   font-family: "Roboto", sans-serif;
@@ -301,7 +307,8 @@ footer {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-
+  border: 2px solid rgb(66, 89, 144);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   margin-top: 100px;
   width: 100%;
 }
@@ -367,6 +374,7 @@ footer {
   margin-left: 100px;
   margin-bottom: 0px;
   font-size: 1.5em;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .return-button:hover {
@@ -532,12 +540,30 @@ footer {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 1.5em;
   font-weight: 200;
   background-color: rgb(238, 238, 238);
+}
+
+#delete-account-button {
+  padding: 15px;
+  background-color: rgb(255, 35, 35);
+  color: white;
+  border-radius: 15px;
+  border: 1px solid rgb(66, 89, 144);
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#delete-account-button:hover {
+  background-color: rgb(189, 46, 46);
+  transition: 0.2s;
 }
 
 #account-title {
@@ -736,4 +762,72 @@ footer {
   margin-top: 0;
   margin-bottom: 5px;
   display: block;
+}
+
+/* MODAL DELETE ACCOUNT */
+
+#modal-delete-account {
+  background-color: white;
+  width: 40%;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  top: 220px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  padding: 15px;
+  border: 3px solid rgb(216, 47, 47);
+  display: none;
+}
+
+#close-modal-delete-account {
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+  color: red;
+  font-size: 3em;
+  cursor: pointer;
+  margin: 0;
+}
+
+#delete-account-modal-buttons {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.delete-account-button {
+  border: 1px solid black;
+  padding: 10px 30px;
+  border-radius: 4px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+#modal-delete-account-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  margin-top: 40px;
+  color: rgb(216, 47, 47);
+}
+#modal-delete-account-para {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#delete-account-button-oui {
+  background-color: rgb(255, 35, 35);
+  color: white;
+  text-decoration: none;
+}
+
+#delete-account-button-oui:hover {
+  background-color: rgb(216, 47, 47);
+  transition: 0.1s;
+}
+#delete-account-button-non:hover {
+  background-color: rgb(211, 211, 211);
+  transition: 0.1s;
 }

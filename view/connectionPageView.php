@@ -46,6 +46,11 @@ if (isset($_POST['pseudo-connection']) && isset($_POST['password-connection'])){
             echo '<p class="alert" id="success">Votre compte a été créé. Vous pouvez maintenant vous connecter.</p>';
     }
 ?>
+<style>
+    #page-container {
+    background: linear-gradient(white , silver);
+}
+</style>
 
         <h1 id="connection-title">Créez votre compte gratuitement</h1>
         <form method="post" action="index.php">

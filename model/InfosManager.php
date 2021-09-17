@@ -28,4 +28,14 @@ class InfosManager extends Manager{
         
         header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&modifysuccess=1');
     }
+
+
+    public function deleteRowsAccount(){
+        $bdd = $this->connection();
+
+        $requete = 'DELETE FROM `passwords_users` WHERE `id_user` = '.$_SESSION['user_id'];
+
+        $bdd->exec($requete);
+    }
+    
 }

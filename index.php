@@ -13,8 +13,11 @@ session_start();
                 $idDelete = $_GET['idDelete'];
                 deletePsw($idDelete);
         }
-
-        if (isset ($_GET["newPsw1"]) && isset ($_GET["newPsw2"])){
+        else if (isset ($_GET["deleteaccount"])){
+            deleteAccount();
+            
+        }
+        else if (isset ($_GET["newPsw1"]) && isset ($_GET["newPsw2"])){
 
             if($_GET["newPsw1"] != $_GET["newPsw2"]){
                 header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&pswmatcherror=1 ');
@@ -24,7 +27,7 @@ session_start();
                 $newPsw = $_GET["newPsw1"];
                 modifyPsw($idModify, $newPsw);
             }
-    }
+        }
 
         if (isset ($_GET['page'])){
 

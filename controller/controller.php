@@ -56,3 +56,16 @@
         $userManager->deleteRow($idDelete);
     }
 
+
+    function deleteAccount() {
+        $InfosManager = new InfosManager();
+        $InfosManager->deleteRowsAccount();
+
+        $userManager = new UserManager();
+        $userManager->deleteUser();
+
+        session_unset();
+        session_destroy();
+
+        header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&pswmatcherror=1 ');
+    }

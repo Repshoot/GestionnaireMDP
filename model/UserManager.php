@@ -91,6 +91,23 @@ class UserManager extends Manager {
 
             header('location: http://localhost/GestionnaireMDP/index.php/?page=managepsw&deletesuccess=1');
             }
+
+            public function deleteUser(){
+                $bdd = $this->connection();
+                try{
+                    $requete = ('DELETE FROM users WHERE id = '.$_SESSION['user_id']);
+                    $bdd->exec($requete);
+                }
+                catch(PDOException $e) {
+                    echo $e->getMessage();
+                    require('http://localhost/GestionnaireMDP/index.php/?page=errorView');
+                }
+            }
     }
+
+
+
+
+
 
     
