@@ -6,6 +6,14 @@ ob_start();
     background: linear-gradient(silver, rgb(160, 72, 108));
 }
 </style>
+<a class="return-button" type="button" href="userBoardView.php">&lt;&lt; Retour</a>
+<?php
+    if(getNumberPsw() == 0){
+        ?>
+        <p class="no-psw-message">Vous n'avez pas de mots de passes en stock.</p>
+        <?php
+    }
+    else {?>
 
 <div id="modal-background-delete">
 </div>
@@ -42,7 +50,7 @@ ob_start();
 </div>
 
 
-<a class="return-button" type="button" href="userBoardView.php">&lt;&lt; Retour</a>
+
 
         <?php
         if (isset($_GET['deletesuccess'])){
@@ -80,7 +88,8 @@ ob_start();
             ?>
         </table>
 </div>
-
+<?php }
+?>
 
 <?php
     $content = ob_get_clean();

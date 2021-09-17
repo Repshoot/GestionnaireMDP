@@ -8,6 +8,14 @@ ob_start();
 </style>
 <a class="return-button" type="button" href="userBoardView.php">&lt;&lt; Retour</a>
 
+
+<?php
+    if(getNumberPsw() == 0){
+        ?>
+        <p class="no-psw-message">Vous n'avez pas de mots de passes en stock.</p>
+        <?php
+    }
+    else {?>
 <div class="container">
     <table id="table-view-psw">
         <tr><th>Site</th><th>Identifiant</th><th>Mot de passe</th></tr>
@@ -29,6 +37,10 @@ ob_start();
         ?>
     </table>
 </div>
+<?php }
+?>
+
+
 
 <?php
     $content = ob_get_clean();

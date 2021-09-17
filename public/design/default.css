@@ -866,3 +866,10 @@ input {
 #error-message {
   font-size: 1.5em;
 }
+
+.no-psw-message {
+  text-align: center;
+  font-size: 2em;
+  color: rgb(55, 74, 119);
+  margin-top: 20px;
+}
