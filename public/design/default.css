@@ -162,7 +162,7 @@ footer {
 }
 
 .userboard-picture:hover {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.5), 0 20px 20px rgba(0, 0, 0, 0.22);
 }
 
 .userboard-picture img {
@@ -270,6 +270,7 @@ footer {
   color: white;
   font-family: "Roboto", sans-serif;
   padding: 12px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.22);
 }
 
 #sub-button:hover {
@@ -277,6 +278,7 @@ footer {
   border: 1px solid rgb(66, 89, 144);
   color: rgb(66, 89, 144);
   transition: 0.1s;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.22);
 }
 
 #cancel-sub-button {
@@ -840,4 +842,23 @@ input {
 #delete-account-button-non:hover {
   background-color: rgb(211, 211, 211);
   transition: 0.1s;
+}
+
+#add-button {
+  background-color: #4db34b;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 11px;
+}
+
+#add-button:hover {
+  background-color: #469e44;
+}
+
+#add-psw-title {
+  color: #4db34b;
+  text-align: center;
+  margin: 20px;
 }

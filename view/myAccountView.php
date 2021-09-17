@@ -32,15 +32,6 @@ ob_start();
     </table>
 
 </div>
-<script>
-    function showDeleteAccountModal () {
-        let modalDeleteAccount = document.querySelector("#modal-delete-account");
-        let deleteButtonOui = document.querySelector("#delete-account-button-oui");
-
-        modalDeleteAccount.style.display = "block";    
-    }
-
-</script>
 
 <?php
     $content = ob_get_clean();

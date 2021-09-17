@@ -47,7 +47,6 @@ ob_start();
         <?php
         if (isset($_GET['deletesuccess'])){
             ?>
-
             <div class="alert-psw-manage success" id="alert-psw-manage-success">Informations supprimées.</div>
             <?php
         }   
@@ -61,15 +60,7 @@ ob_start();
         <?php
         }
         ?>
-        <script>
-            setTimeout(function(){
-                document.getElementById('alert-psw-manage-success').style.display = 'none';
-            }, 3000);
 
-            setTimeout(function(){
-                document.getElementById('alert-psw-manage-error').style.display = 'none';
-            }, 3000);
-        </script>
 
 <div class="container">
         <table id="table-manage-psw">
@@ -90,31 +81,6 @@ ob_start();
         </table>
 </div>
 
-<script>
-    function showDeleteModal (rowToDelete) {
-        let modalDelete = document.querySelector("#modal-delete");
-        let modalModify = document.querySelector("#modal-modify");
-        let deleteButtonOui = document.querySelector("#delete-button-oui");
-
-        let idInputDelete = document.querySelector("#id-input-delete");
-        idInputDelete.value = rowToDelete; 
-
-        modalDelete.style.display = "block";        
-        modalModify.style.display = "none"; 
-    }
-
-    function showModifyModal (rowToModify) {
-        let modalModify = document.querySelector("#modal-modify");
-        let modalDelete = document.querySelector("#modal-delete");
-        let deleteButtonOui = document.querySelector("#modify-button-oui");
-
-        let idInputModify = document.querySelector("#id-input-modify");
-        idInputModify.value = rowToModify; 
-
-        modalModify.style.display = "block";   
-        modalDelete.style.display = "none";     
-    }
-</script>
 
 <?php
     $content = ob_get_clean();

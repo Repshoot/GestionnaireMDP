@@ -10,34 +10,18 @@ if(!empty($_POST['addWebsite']) && !empty($_POST['addUsername']) && !empty($_POS
 
     addInfos($website, $username, $password);
 }
-
 ?>
 
 <style>
-h1 {
-    color: #4db34b;
-    text-align: center;
-    margin: 15px;
-}
-
-#page-container {
-    background: linear-gradient(silver, #83b981);
-}
-
-#sub-button {
-    background-color: #4db34b;
-}
-
-#sub-button:hover {
-    color: #4db34b;
-    border: 1px solid #4db34b;
-}
+    #page-container {
+        background: linear-gradient(silver, #83b981);
+    }
 </style>
 
 <a class="return-button" type="button" href="userBoardView.php">&lt;&lt; Retour</a>
 <div class="container">
     <div class="subscription-form" id="addPswForm">
-        <h1>Ajouter des mots de passe</h1>
+        <h1 id="add-psw-title">Ajouter des mots de passe</h1>
         <hr>
         <?php
             if(isset($_GET['success'])){
@@ -46,13 +30,6 @@ h1 {
                     <img id="checkbox-image" src="http://localhost/GestionnaireMDP/public/assets/checkbox.jpg" alt="checkbox">
                     <p class="alert-psw-manage success" id="add-success">Informations enregistrées avec succès</p>
                 </div>
-
-                <script>
-                    setTimeout(function(){
-                        document.getElementById('add-success-container').style.display = 'none';
-                    }, 3000);
-                </script>
-
                 <?php
             }
         ?>
@@ -61,7 +38,7 @@ h1 {
                 <tr><td><label>Site</label></td><td><input type="text" name="addWebsite" required></td></tr>
                 <tr><td><label>Nom d'utilisateur</label></td><td><input type="text" name="addUsername" required></td></tr>
                 <tr><td><label>Mot de passe</label></td><td><input type="text" name="addPassword" required></td></tr>
-                <tr><td></td><td><button id="sub-button" type="submit" name="sub">Ajouter</button></td></tr>
+                <tr><td></td><td><button id="add-button" type="submit" name="sub">Ajouter</button></td></tr>
             </table>
         </form>
     </div>
